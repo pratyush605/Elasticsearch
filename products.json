@@ -28,7 +28,13 @@
           "match": "*",
           "mapping": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
           }
         }
       }
@@ -42,7 +48,12 @@
         "properties": {
           "CATG_TYPE": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
           },
           "CATG_ID1": {
             "type": "long"
@@ -64,27 +75,57 @@
           },
           "CATG_NAME_ED1": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
           },
           "CATG_NAME_ED2": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
           },
           "CATG_NAME_ED3": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
           },
           "CATG_NAME_ED4": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
           },
           "CATG_NAME_ED5": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
           },
           "CATG_NAME_ED6": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
           }
         }
       },
@@ -105,14 +146,24 @@
       },
       "COMPNAME": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "CONTINENT_ID": {
         "type": "keyword"
       },
       "CONTINENT_NAME": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "COUNTRY_CODE": {
         "type": "keyword"
@@ -122,7 +173,12 @@
       },
       "COUNTRY_NAME": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "COUNTRY_PREGION_ID": {
         "type": "long"
@@ -148,14 +204,24 @@
       },
       "EMAIL": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "FLAG": {
         "type": "long"
       },
       "HAS_IMAGE": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "INCOTERM": {
         "type": "long"
@@ -191,7 +257,12 @@
       },
       "MATCH_EMAIL_FREQUENCY": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "MEMBER_ADDDATE": {
         "type": "date",
@@ -215,7 +286,12 @@
       },
       "NAME": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "NOT_ANALYZED_CATEGORY_NAME": {
         "type": "keyword",
@@ -253,25 +329,45 @@
       },
       "PHONE": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "PREMIUM_MEM_TYPE": {
         "type": "keyword"
       },
       "PRODUCT_GRADE": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "RATE": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "RATE_UNIT": {
         "type": "long"
       },
       "SELLERCODE": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "SELLER_ID": {
         "type": "long"
@@ -285,15 +381,30 @@
       },
       "STATE": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "STATUS": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "USERNAME": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "USER_CONSENT": {
         "type": "long"

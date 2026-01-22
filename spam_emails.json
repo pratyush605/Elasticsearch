@@ -28,7 +28,13 @@
           "match": "*",
           "mapping": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
           }
         }
       }
@@ -38,31 +44,22 @@
         "type": "date",
         "format": "strict_date_optional_time"
       },
-      "CATG_CODE": {
-        "type": "keyword"
-      },
-      "CATG_TYPE": {
-        "type": "keyword"
-      },
-      "CONTINENT_ID": {
-        "type": "keyword"
-      },
-      "COUNTRY_CODE": {
-        "type": "keyword"
-      },
-      "EMAIL": {
+      "ANSWER": {
         "type": "text",
         "analyzer": "english"
       },
-      "LOGIN": {
-        "type": "keyword"
+      "FLAG": {
+        "type": "long"
       },
-      "MAIL_DOMAIN": {
+      "FINAL_FLAG": {
+        "type": "long"
+      },
+      "LINK": {
         "type": "text",
         "analyzer": "english"
       },
-      "MEMLOGIN": {
-        "type": "keyword"
+      "LOGSTASH_TRACKING_COLUMN": {
+        "type": "long"
       },
       "MODDATE": {
         "type": "date",
@@ -72,35 +69,9 @@
         "type": "keyword",
         "normalizer": "lowercase_normalizer"
       },
-      "NOT_ANALYZED_CATG_CONTENT_NAME": {
-        "type": "keyword"
-      },
-      "NOT_ANALYZED_CATG_NAME": {
-        "type": "keyword"
-      },
-      "NOT_ANALYZED_CITY_NAME": {
-        "type": "keyword",
-        "normalizer": "lowercase_normalizer"
-      },
-      "NOT_ANALYZED_COUNTRY_NAME": {
-        "type": "keyword",
-        "normalizer": "lowercase_normalizer"
-      },
-      "NOT_ANALYZED_GRANDPARENT_CATG_NAME": {
-        "type": "keyword"
-      },
-      "NOT_ANALYZED_MAIN_CATEGORY": {
-        "type": "keyword"
-      },
-      "NOT_ANALYZED_PARENT_CATG_NAME": {
-        "type": "keyword"
-      },
-      "NOT_ANALYZED_STATE_NAME": {
-        "type": "keyword",
-        "normalizer": "lowercase_normalizer"
-      },
-      "SENDEREMAIL": {
-        "type": "keyword"
+      "QUESTION": {
+        "type": "text",
+        "analyzer": "english"
       }
     }
   }

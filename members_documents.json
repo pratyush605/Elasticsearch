@@ -28,7 +28,13 @@
           "match": "*",
           "mapping": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
           }
         }
       }
@@ -48,22 +54,42 @@
       },
       "DOC_CATG": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "DOC_ID": {
         "type": "long"
       },
       "DOC_MAIN_CATG": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "DOC_NAME": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "DOC_VERIFICATION_STATUS": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "FLAG": {
         "type": "long"
@@ -84,7 +110,12 @@
       },
       "VERSION": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       }
     }
   }

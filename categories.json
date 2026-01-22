@@ -28,7 +28,13 @@
           "match": "*",
           "mapping": {
             "type": "text",
-            "analyzer": "english"
+            "analyzer": "english",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
           }
         }
       }
@@ -53,7 +59,12 @@
       },
       "CATG_NAME": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "CATG_PARENT": {
         "type": "long"
@@ -72,7 +83,12 @@
       },
       "GRAND_PARENT_CATG_NAME": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "ID": {
         "type": "long"
@@ -120,7 +136,12 @@
       },
       "PARENT_CATG_NAME": {
         "type": "text",
-        "analyzer": "english"
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
       },
       "SENDEREMAIL": {
         "type": "keyword"

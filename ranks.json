@@ -28,7 +28,13 @@
                     "match": "*",
                     "mapping": {
                         "type": "text",
-                        "analyzer": "english"
+                        "analyzer": "english",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
                     }
                 }
             }

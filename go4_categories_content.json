@@ -28,7 +28,13 @@
                     "match": "*",
                     "mapping": {
                         "type": "text",
-                        "analyzer": "english"
+                        "analyzer": "english",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
                     }
                 }
             }
@@ -80,7 +86,12 @@
             },
             "NOT_ANALYZED_CATG_CONTENT_NAME": {
                 "type": "text",
-                "analyzer": "english"
+                "analyzer": "english",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
             },
             "NOT_ANALYZED_CATG_NAME": {
                 "type": "keyword"

@@ -11,12 +11,12 @@
                 }
             },
             "normalizer": {
-              "lowercase_normalizer": {
-                "type": "custom",
-                "filter": [
-                  "lowercase"
-                ]
-              }
+                "lowercase_normalizer": {
+                    "type": "custom",
+                    "filter": [
+                        "lowercase"
+                    ]
+                }
             }
         }
     },
@@ -28,7 +28,13 @@
                     "match": "*",
                     "mapping": {
                         "type": "text",
-                        "analyzer": "english"
+                        "analyzer": "english",
+                        "fields": {
+                            "keyword": {
+                                "type": "keyword",
+                                "ignore_above": 256
+                            }
+                        }
                     }
                 }
             }
