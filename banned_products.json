@@ -1,0 +1,70 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "case_insensitive": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "en": {
+          "match_mapping_type": "string",
+          "match": "*",
+          "mapping": {
+            "type": "text",
+            "analyzer": "english"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "ADDDATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "CAS_NUMBER": {
+        "type": "text",
+        "analyzer": "case_insensitive"
+      },
+      "CATEGORY": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "EXACT_MATCH": {
+        "type": "long"
+      },
+      "HAS_CODE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "NOT_ANALYZED_CATEGORY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "MODDATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "PRODUCT_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      }
+    }
+  }
+}

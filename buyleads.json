@@ -1,0 +1,377 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "case_insensitive": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "en": {
+          "match_mapping_type": "string",
+          "match": "*",
+          "mapping": {
+            "type": "text",
+            "analyzer": "english"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "ADDDATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "ADDRESS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "ALT_EMAILS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "ALT_PHONES": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "ARCHIVED": {
+        "type": "long"
+      },
+      "BATCH_ID": {
+        "type": "long"
+      },
+      "BUYLEADS_EDIT_TEXT": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "BUYLEADS_FULL_TEXT": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "BUYLEADS_SUBJECT": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATEGORIES": {
+        "properties": {
+          "CATG_TYPE": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_ID1": {
+            "type": "long"
+          },
+          "CATG_ID2": {
+            "type": "long"
+          },
+          "CATG_ID3": {
+            "type": "long"
+          },
+          "CATG_ID4": {
+            "type": "long"
+          },
+          "CATG_ID5": {
+            "type": "long"
+          },
+          "CATG_ID6": {
+            "type": "long"
+          },
+          "CATG_NAME_ID1": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID2": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID3": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID4": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID5": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID6": {
+            "type": "text",
+            "analyzer": "english"
+          }
+        }
+      },
+      "CATG_CODE": {
+        "type": "keyword"
+      },
+      "CATG_TYPE": {
+        "type": "keyword"
+      },
+      "CITY": {
+        "type": "text",
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "COMPNAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CONTACT_EMAIL_ONLY": {
+        "type": "long"
+      },
+      "CONTACT_PERSON": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CONTINENT_ID": {
+        "type": "keyword"
+      },
+      "CONTINENT_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CONTINENT_PREFERENCE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "COUNTRY_ID": {
+        "type": "long"
+      },
+      "COUNTRY_CODE": {
+        "type": "keyword"
+      },
+      "COUNTRY_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "COUNTRY_PREFERENCE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "COUNTRY_PREGION_ID": {
+        "type": "long"
+      },
+      "COUNTRY_SREGION_ID": {
+        "type": "long"
+      },
+      "DEAL_SIZE_CURRENCY_CODE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DEAL_SIZE_CURRENCY_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DESIGNATION": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DESTINATION_COUNTRY_CODE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DESTINATION_COUNTRY_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DESTINATION_PORT": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "EMAIL": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "EMAIL_VERIFIED": {
+        "type": "long"
+      },
+      "EXCLUDED_CONTINENTS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "EXCLUDED_COUNTRIES": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "FAX": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "FLAG": {
+        "type": "long"
+      },
+      "ID": {
+        "type": "long"
+      },
+      "IS_BUY_ITEM": {
+        "type": "long"
+      },
+      "IS_SAMPLE": {
+        "type": "long"
+      },
+      "IS_SELL_ITEM": {
+        "type": "long"
+      },
+      "LEADTTOINQ_ID": {
+        "type": "long"
+      },
+      "LOGIN": {
+        "type": "keyword"
+      },
+      "MAX_DEAL_SIZE": {
+        "type": "double"
+      },
+      "MAX_QUANTITY": {
+        "type": "double"
+      },
+      "MAX_TARGET_PRICE": {
+        "type": "double"
+      },
+      "MEMID": {
+        "type": "long"
+      },
+      "MEMLOGIN": {
+        "type": "keyword"
+      },
+      "MIN_DEAL_SIZE": {
+        "type": "double"
+      },
+      "MIN_QUANTITY": {
+        "type": "double"
+      },
+      "MIN_TARGET_PRICE": {
+        "type": "double"
+      },
+      "MOBILE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "MOBILE_VERIFIED": {
+        "type": "long"
+      },
+      "MODDATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "NOT_ANALYZED_CATEGORY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_CITY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_COUNTRY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_GRANDPARENT_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_MAIN_CATEGORY": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_PARENT_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_STATE_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "PACKAGING_TERMS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "PAYMENT_TERMS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "PHONE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "PHONE_VERIFIED": {
+        "type": "long"
+      },
+      "PRICE_PER_UNIT": {
+        "type": "double"
+      },
+      "PRICE_UNITS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "QUANTITY_DURATION": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "QUANTITY_UNITS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "REQUIREMENT_IN_DAYS": {
+        "type": "long"
+      },
+      "REQUIREMENT_NATURE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "SENDEREMAIL": {
+        "type": "keyword"
+      },
+      "SHIPPING_TERMS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "STATE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "TARGET_COUNTRIES": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "TARGET_PRICE_CURRENCY_CODE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "TARGET_PRICE_CURRENCY_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "USER_CONSENT": {
+        "type": "long"
+      },
+      "VERIFIED_LEAD_TYPE": {
+        "type": "keyword"
+      },
+      "ZIP": {
+        "type": "text",
+        "analyzer": "english"
+      }
+    }
+  }
+}

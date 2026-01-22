@@ -1,0 +1,399 @@
+{
+  "aggregations": {
+    "regions": {
+      "terms": {
+        "field": "CONTINENT_ID",
+        "order": [
+          {
+            "_count": "desc"
+          }
+        ],
+        "size": 10
+      }
+    },
+    "dates": {
+      "date_range": {
+        "field": "MODDATE",
+        "format": "MM-yyy-dd",
+        "ranges": [
+          {
+            "from": "now-3d/d",
+            "key": "a"
+          },
+          {
+            "from": "now-7d/d",
+            "key": "b"
+          },
+          {
+            "from": "now-30d/d",
+            "key": "c"
+          },
+          {
+            "from": "now-60d/d",
+            "key": "d"
+          },
+          {
+            "key": "e",
+            "to": "now-60d/d"
+          }
+        ]
+      }
+    },
+    "countries": {
+      "terms": {
+        "field": "NOT_ANALYZED_COUNTRY_NAME",
+        "order": [
+          {
+            "_count": "desc"
+          }
+        ],
+        "size": 20
+      }
+    }
+  },
+  "from": 0,
+  "indices_boost": [
+    {
+      "go4_pref_products": 1.4
+    }
+  ],
+  "min_score": 0.30000001192092896,
+  "post_filter": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "should": [
+              {
+                "terms": {
+                  "CONTINENT_ID": [
+                    "AS"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "terms": {
+                  "PREMIUM_MEM_TYPE": [
+                    "G"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "term": {
+                  "_index": {
+                    "value": "go4_products"
+                  }
+                }
+              },
+              {
+                "term": {
+                  "_index": {
+                    "value": "go4_pref_products"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bool": {
+            "must": [
+              {
+                "range": {
+                  "MODDATE": {
+                    "gte": "now-60d/d"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "bool": {
+            "must": [
+              {
+                "terms": {
+                  "IS_SELL_ITEM": [
+                    "1"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "must": [
+        {
+          "function_score": {
+            "boost_mode": "sum",
+            "functions": [
+              {
+                "filter": {
+                  "term": {
+                    "ARCHIVED": {
+                      "value": "0"
+                    }
+                  }
+                },
+                "weight": 8.0
+              },
+              {
+                "filter": {
+                  "term": {
+                    "ARCHIVED": {
+                      "value": "1"
+                    }
+                  }
+                },
+                "weight": 0.1
+              },
+              {
+                "field_value_factor": {
+                  "field": "MEMBER_RANK",
+                  "factor": 0.0015,
+                  "missing": 1.0,
+                  "modifier": "log2p"
+                }
+              }
+            ],
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "multi_match": {
+                      "fields": [
+                        "COUNTRY_NAME",
+                        "CONTINENT_NAME",
+                        "CATEGORIES.CATG_NAME_ED*",
+                        "CATEGORIES.CATG_NAME_SD*",
+                        "DEALSIN_EXP",
+                        "DEALSIN_SVC",
+                        "COMPNAME",
+                        "STATE",
+                        "CITY",
+                        "KEYWORD*",
+                        "SHORT_DESC",
+                        "DESCRIPTION",
+                        "KEY_SPEC*",
+                        "NAME^5"
+                      ],
+                      "minimum_should_match": "40%",
+                      "query": "rice"
+                    }
+                  }
+                ],
+                "should": [
+                  {
+                    "multi_match": {
+                      "boost": 2.0,
+                      "fields": [
+                        "COUNTRY_NAME",
+                        "CONTINENT_NAME",
+                        "CATEGORIES.CATG_NAME_ED*",
+                        "CATEGORIES.CATG_NAME_SD*",
+                        "DEALSIN_EXP",
+                        "DEALSIN_SVC",
+                        "COMPNAME",
+                        "STATE",
+                        "CITY",
+                        "KEYWORD*",
+                        "SHORT_DESC",
+                        "DESCRIPTION",
+                        "KEY_SPEC*",
+                        "NAME^5"
+                      ],
+                      "query": "rice",
+                      "slop": 4,
+                      "type": "phrase"
+                    }
+                  },
+                  {
+                    "bool": {
+                      "boost": 10.0,
+                      "must": [
+                        {
+                          "match": {
+                            "HAS_IMAGE": {
+                              "query": "1"
+                            }
+                          }
+                        },
+                        {
+                          "match": {
+                            "PREMIUM_MEM_TYPE": {
+                              "query": "G"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "match": {
+                      "PREMIUM_MEM_TYPE": {
+                        "boost": 5.0,
+                        "query": "G"
+                      }
+                    }
+                  },
+                  {
+                    "match": {
+                      "PREMIUM_MEM_TYPE": {
+                        "boost": 4.0,
+                        "query": "S"
+                      }
+                    }
+                  },
+                  {
+                    "match": {
+                      "CATEGORIES.CATG_NAME_ED1": {
+                        "boost": 6.0,
+                        "query": "rice"
+                      }
+                    }
+                  },
+                  {
+                    "bool": {
+                      "boost": 3.0,
+                      "must": [
+                        {
+                          "match": {
+                            "VERIFIED_LEAD_TYPE": {
+                              "query": "V"
+                            }
+                          }
+                        },
+                        {
+                          "range": {
+                            "ADDDATE": {
+                              "gte": "now-1d/d"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bool": {
+                      "boost": 2.799999952316284,
+                      "must": [
+                        {
+                          "match": {
+                            "VERIFIED_LEAD_TYPE": {
+                              "query": "V"
+                            }
+                          }
+                        },
+                        {
+                          "range": {
+                            "ADDDATE": {
+                              "gte": "now-2d/d"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bool": {
+                      "boost": 2.5,
+                      "must": [
+                        {
+                          "match": {
+                            "VERIFIED_LEAD_TYPE": {
+                              "query": "V"
+                            }
+                          }
+                        },
+                        {
+                          "range": {
+                            "ADDDATE": {
+                              "gte": "now-1w"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bool": {
+                      "boost": 2.200000047683716,
+                      "must": [
+                        {
+                          "match": {
+                            "VERIFIED_LEAD_TYPE": {
+                              "query": "V"
+                            }
+                          }
+                        },
+                        {
+                          "range": {
+                            "ADDDATE": {
+                              "gte": "now-1M"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bool": {
+                      "boost": 2.0999999046325684,
+                      "must": [
+                        {
+                          "match": {
+                            "VERIFIED_LEAD_TYPE": {
+                              "query": "V"
+                            }
+                          }
+                        },
+                        {
+                          "range": {
+                            "ADDDATE": {
+                              "gte": "now-6M"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "size": 20,
+  "sort": [
+    {
+      "_score": {
+        "order": "desc"
+      }
+    },
+    {
+      "MODDATE": {
+        "order": "desc"
+      }
+    }
+  ]
+}

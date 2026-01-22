@@ -1,0 +1,218 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "case_insensitive": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "en": {
+          "match_mapping_type": "string",
+          "match": "*",
+          "mapping": {
+            "type": "text",
+            "analyzer": "english"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "CATG_CODE": {
+        "type": "keyword"
+      },
+      "CATG_CODE1": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_CODE2": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_CODE3": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_CODE4": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_CODE5": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_CODE6": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_ID1": {
+        "type": "long"
+      },
+      "CATG_ID2": {
+        "type": "long"
+      },
+      "CATG_ID3": {
+        "type": "long"
+      },
+      "CATG_ID4": {
+        "type": "long"
+      },
+      "CATG_ID5": {
+        "type": "long"
+      },
+      "CATG_ID6": {
+        "type": "long"
+      },
+      "CATG_LEVEL1": {
+        "type": "long"
+      },
+      "CATG_LEVEL2": {
+        "type": "long"
+      },
+      "CATG_LEVEL3": {
+        "type": "long"
+      },
+      "CATG_LEVEL4": {
+        "type": "long"
+      },
+      "CATG_LEVEL5": {
+        "type": "long"
+      },
+      "CATG_LEVEL6": {
+        "type": "long"
+      },
+      "CATG_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_NAME1": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_NAME2": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_NAME3": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_NAME4": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_NAME5": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_NAME6": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_PARENT1": {
+        "type": "long"
+      },
+      "CATG_PARENT2": {
+        "type": "long"
+      },
+      "CATG_PARENT3": {
+        "type": "long"
+      },
+      "CATG_PARENT4": {
+        "type": "long"
+      },
+      "CATG_PARENT5": {
+        "type": "long"
+      },
+      "CATG_PARENT6": {
+        "type": "long"
+      },
+      "CATG_TYPE": {
+        "type": "keyword"
+      },
+      "CATG_TYPE1": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_TYPE2": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_TYPE3": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_TYPE4": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_TYPE5": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CATG_TYPE6": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CONTINENT_ID": {
+        "type": "keyword"
+      },
+      "COUNTRY_CODE": {
+        "type": "keyword"
+      },
+      "LOGIN": {
+        "type": "keyword"
+      },
+      "MEMLOGIN": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_CATEGORY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_CITY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_COUNTRY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_GRANDPARENT_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_MAIN_CATEGORY": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_PARENT_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_STATE_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "SENDEREMAIL": {
+        "type": "keyword"
+      }
+    }
+  }
+}

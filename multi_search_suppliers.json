@@ -1,0 +1,227 @@
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "function_score": {
+          "query": {
+            "bool": {
+              "must": [
+                {
+                  "query_string": {
+                    "query": "\"T-Shirt\" OR \"Dress\" OR \"Jeans\" OR \"Jacket\" OR \"Shoes\" OR \"Jewelry\" OR \"Watches\" OR \"Handbags\" OR \"Accessories\" OR \"Lingerie\"",
+                    "fields": [
+                      "NAME"
+                    ]
+                  }
+                },
+                {
+                  "match_all": {}
+                }
+              ],
+              "should": [
+                {
+                  "bool": {
+                    "boost": 5.0,
+                    "must": [
+                      {
+                        "match": {
+                          "HAS_IMAGE": {
+                            "query": "1"
+                          }
+                        }
+                      },
+                      {
+                        "match": {
+                          "PREMIUM_MEM_TYPE": {
+                            "query": "G"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "match": {
+                    "PREMIUM_MEM_TYPE": {
+                      "query": "G",
+                      "boost": 3.0
+                    }
+                  }
+                },
+                {
+                  "match": {
+                    "PREMIUM_MEM_TYPE": {
+                      "query": "S",
+                      "boost": 2.0
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "functions": [
+            {
+              "filter": {
+                "range": {
+                  "MODDATE": {
+                    "gte": "now-7d/d"
+                  }
+                }
+              },
+              "weight": 10.0
+            },
+            {
+              "filter": {
+                "range": {
+                  "MODDATE": {
+                    "gte": "now-1m/m"
+                  }
+                }
+              },
+              "weight": 8.0
+            },
+            {
+              "filter": {
+                "range": {
+                  "MODDATE": {
+                    "gte": "now-3m/m"
+                  }
+                }
+              },
+              "weight": 5.0
+            }
+          ],
+          "score_mode": "sum",
+          "boost_mode": "sum"
+        }
+      },
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "match_all": {}
+            },
+            {
+              "terms": {
+                "IS_SELL_ITEM": [
+                  "1"
+                ]
+              }
+            },
+            {
+              "match_all": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  "post_filter": {
+    "bool": {
+      "must": [
+        {
+          "match_all": {}
+        },
+        {
+          "match_all": {}
+        },
+        {
+          "match_all": {}
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "type": {
+                  "value": "products"
+                }
+              },
+              {
+                "type": {
+                  "value": "pref_products"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "match_all": {}
+        }
+      ]
+    }
+  },
+  "sort": [
+    "_score",
+    {
+      "MEMBER_RANK": {
+        "order": "desc"
+      }
+    }
+  ],
+  "aggs": {
+    "byCompany": {
+      "terms": {
+        "field": "SELLER_ID",
+        "size": 20
+      },
+      "aggs": {
+        "topProducts": {
+          "top_hits": {
+            "size": 1
+          }
+        },
+        "max_score": {
+          "max": {
+            "script_file": "getDocScore"
+          }
+        }
+      }
+    },
+    "countries": {
+      "terms": {
+        "field": "NOT_ANALYZED_COUNTRY_NAME",
+        "size": 20,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    },
+    "regions": {
+      "terms": {
+        "field": "CONTINENT_ID",
+        "size": 10,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    },
+    "dates": {
+      "date_range": {
+        "field": "MODDATE",
+        "format": "MM-yyy-dd",
+        "ranges": [
+          {
+            "key": "a",
+            "from": "now-3d/d"
+          },
+          {
+            "key": "b",
+            "from": "now-7d/d"
+          },
+          {
+            "key": "c",
+            "from": "now-30d/d"
+          },
+          {
+            "key": "d",
+            "from": "now-60d/d"
+          },
+          {
+            "key": "e",
+            "to": "now-60d/d"
+          }
+        ]
+      }
+    }
+  }
+}

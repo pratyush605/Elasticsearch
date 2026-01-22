@@ -1,0 +1,91 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "case_insensitive": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "en": {
+          "match_mapping_type": "string",
+          "match": "*",
+          "mapping": {
+            "type": "text",
+            "analyzer": "english"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "ADDDATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "ATTACHMENT": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CREATED_AT": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "DOC_CATG": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DOC_ID": {
+        "type": "long"
+      },
+      "DOC_MAIN_CATG": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DOC_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DOC_VERIFICATION_STATUS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "FLAG": {
+        "type": "long"
+      },
+      "ID": {
+        "type": "long"
+      },
+      "MEMID": {
+        "type": "long"
+      },
+      "MODDATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "NOT_ANALYZED_CATEGORY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "VERSION": {
+        "type": "text",
+        "analyzer": "english"
+      }
+    }
+  }
+}

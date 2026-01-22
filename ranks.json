@@ -1,0 +1,68 @@
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "case_insensitive": {
+                    "type": "custom",
+                    "tokenizer": "keyword",
+                    "filter": [
+                        "lowercase"
+                    ]
+                }
+            },
+            "normalizer": {
+                "lowercase_normalizer": {
+                    "type": "custom",
+                    "filter": [
+                        "lowercase"
+                    ]
+                }
+            }
+        }
+    },
+    "mappings": {
+        "dynamic_templates": [
+            {
+                "en": {
+                    "match_mapping_type": "string",
+                    "match": "*",
+                    "mapping": {
+                        "type": "text",
+                        "analyzer": "english"
+                    }
+                }
+            }
+        ],
+        "properties": {
+            "ADDDATE": {
+                "type": "date",
+                "format": "strict_date_optional_time"
+            },
+            "CREATED_AT": {
+                "type": "date",
+                "format": "strict_date_optional_time"
+            },
+            "ID": {
+                "type": "long"
+            },
+            "MEMBER_ID": {
+                "type": "long"
+            },
+            "MODDATE": {
+                "type": "date",
+                "format": "strict_date_optional_time"
+            },
+            "NOT_ANALYZED_CATEGORY_NAME": {
+                "type": "keyword",
+                "normalizer": "lowercase_normalizer"
+            },
+            "RULE_NAME": {
+                "type": "text",
+                "analyzer": "english"
+            },
+            "RULE_WEIGHT": {
+                "type": "long"
+            }
+        }
+    }
+}

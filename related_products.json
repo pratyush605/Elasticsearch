@@ -1,0 +1,96 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "case_insensitive": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "en": {
+          "match_mapping_type": "string",
+          "match": "*",
+          "mapping": {
+            "type": "text",
+            "analyzer": "english"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "CATG_CODE": {
+        "type": "keyword"
+      },
+      "CATG_TYPE": {
+        "type": "keyword"
+      },
+      "CONTINENT_ID": {
+        "type": "keyword"
+      },
+      "COUNTRY_CODE": {
+        "type": "keyword"
+      },
+      "KEYWORD": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "LOGIN": {
+        "type": "keyword"
+      },
+      "MEMLOGIN": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_CATEGORY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_CITY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_COUNTRY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_GRANDPARENT_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_MAIN_CATEGORY": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_PARENT_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_STATE_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "RELATED_KEYWORDS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "SENDEREMAIL": {
+        "type": "keyword"
+      }
+    }
+  }
+}

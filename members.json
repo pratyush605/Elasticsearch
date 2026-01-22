@@ -1,0 +1,392 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "case_insensitive": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "en": {
+          "match_mapping_type": "string",
+          "match": "*",
+          "mapping": {
+            "type": "text",
+            "analyzer": "english"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "ADDDATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "ADDDATE_DAY": {
+        "type": "long"
+      },
+      "ADDDATE_MONTH": {
+        "type": "long"
+      },
+      "ADDDATE_YEAR": {
+        "type": "long"
+      },
+      "ADDRESS1": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "ADDRESS2": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "ADDRESS3": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "ADDRESS4": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "BSNS_SALE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "BSNS_SCALE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "BSNS_YEAR": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CAN_RECVINQ": {
+        "type": "long"
+      },
+      "CATEGORIES": {
+        "properties": {
+          "CATG_TYPE": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_ID1": {
+            "type": "long"
+          },
+          "CATG_ID2": {
+            "type": "long"
+          },
+          "CATG_ID3": {
+            "type": "long"
+          },
+          "CATG_ID4": {
+            "type": "long"
+          },
+          "CATG_ID5": {
+            "type": "long"
+          },
+          "CATG_ID6": {
+            "type": "long"
+          },
+          "CATG_LEVEL1": {
+            "type": "long"
+          },
+          "CATG_NAME_ED1": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED2": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED3": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED4": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED5": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED6": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID1": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID2": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID3": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID4": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID5": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID6": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_SD1": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_SD2": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_SD3": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_SD4": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_SD5": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_SD6": {
+            "type": "text",
+            "analyzer": "english"
+          }
+        }
+      },
+      "CATG_CODE": {
+        "type": "keyword"
+      },
+      "CATG_TYPE": {
+        "type": "keyword"
+      },
+      "CITY": {
+        "type": "text",
+        "analyzer": "english",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "COMPNAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CONTINENT_ID": {
+        "type": "keyword"
+      },
+      "CONTINENT_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "COUNTRY_CODE": {
+        "type": "keyword"
+      },
+      "COUNTRY_ID": {
+        "type": "long"
+      },
+      "COUNTRY_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "COUNTRY_PREGION_ID": {
+        "type": "long"
+      },
+      "COUNTRY_SREGION_ID": {
+        "type": "long"
+      },
+      "DEALSIN_EXP": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DEALSIN_IMP": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DEALSIN_SVC": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "DESIGNATION": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "EMAIL": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "EXP_MKT": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "FAX": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "FLAG": {
+        "type": "long"
+      },
+      "HIDE_SITE_ON_MARKETING_PAGE": {
+        "type": "long"
+      },
+      "HOMEPAGE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "IS_BUY_ITEM": {
+        "type": "long"
+      },
+      "IS_SELL_ITEM": {
+        "type": "long"
+      },
+      "LAST_MEM_ACTIVITY_DATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "LOGIN": {
+        "type": "keyword"
+      },
+      "MATCH_EMAIL_FREQUENCY": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "MEMBER_RANK": {
+        "type": "long"
+      },
+      "MEMBER_RATING": {
+        "type": "double"
+      },
+      "MEMID": {
+        "type": "long"
+      },
+      "MEMLOGIN": {
+        "type": "keyword"
+      },
+      "MEM_CATG_TYPE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "MEM_TYPE": {
+        "type": "long"
+      },
+      "MODDATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "NOT_ANALYZED_CATEGORY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_CITY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_COUNTRY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_GRANDPARENT_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_MAIN_CATEGORY": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_MATCH_EMAIL_FREQUENCY": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_PARENT_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_STATE_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_WEBSITE_CATEGORY": {
+        "type": "keyword"
+      },
+      "PHONE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "PREMIUM_MEMBER_SINCE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "PREMIUM_MEM_TYPE": {
+        "type": "keyword"
+      },
+      "RANK": {
+        "type": "long"
+      },
+      "SENDEREMAIL": {
+        "type": "keyword"
+      },
+      "SHOW_PHONE": {
+        "type": "long"
+      },
+      "STANDARDS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "STATE": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "STATUS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "USERNAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "USER_CONSENT": {
+        "type": "long"
+      },
+      "VERIFIED_MEM_TYPE": {
+        "type": "keyword"
+      },
+      "WORDPRESS_DOMAIN": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "WP_WEBSITE_STATUS": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "ZIP": {
+        "type": "text",
+        "analyzer": "english"
+      }
+    }
+  }
+}

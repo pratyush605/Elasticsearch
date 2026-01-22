@@ -1,0 +1,323 @@
+{
+  "min_score": 0.3,
+  "query": {
+    "filtered": {
+      "query": {
+        "function_score": {
+          "query": {
+            "bool": {
+              "must": {
+                "multi_match": {
+                  "query": "\"rice\"",
+                  "fields": [
+                    "COUNTRY_NAME",
+                    "CONTINENT_NAME",
+                    "TRADELEADS_TITLE",
+                    "TRADELEADS_DETAILS",
+                    "CATG_NAME_ED*",
+                    "CATG_NAME_SD*",
+                    "DEALSIN_EXP",
+                    "DEALSIN_SVC",
+                    "COMPNAME",
+                    "STATE",
+                    "CITY",
+                    "KEYWORD*",
+                    "SHORT_DESC",
+                    "DESCRIPTION",
+                    "KEY_SPEC*",
+                    "NAME^5"
+                  ],
+                  "minimum_should_match": "40%"
+                }
+              },
+              "should": [
+                {
+                  "multi_match": {
+                    "query": "\"rice\"",
+                    "fields": [
+                      "COUNTRY_NAME",
+                      "CONTINENT_NAME",
+                      "TRADELEADS_TITLE",
+                      "TRADELEADS_DETAILS",
+                      "CATG_NAME_ED*",
+                      "CATG_NAME_SD*",
+                      "DEALSIN_EXP",
+                      "DEALSIN_SVC",
+                      "COMPNAME",
+                      "STATE",
+                      "CITY",
+                      "KEYWORD*",
+                      "SHORT_DESC",
+                      "DESCRIPTION",
+                      "KEY_SPEC*",
+                      "NAME^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 4,
+                    "boost": 2.0
+                  }
+                },
+                {
+                  "bool": {
+                    "boost": 10.0,
+                    "must": [
+                      {
+                        "match": {
+                          "HAS_IMAGE": {
+                            "query": "1"
+                          }
+                        }
+                      },
+                      {
+                        "match": {
+                          "PREMIUM_MEM_TYPE": {
+                            "query": "G"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "match": {
+                    "PREMIUM_MEM_TYPE": {
+                      "query": "G",
+                      "boost": 5.0
+                    }
+                  }
+                },
+                {
+                  "match": {
+                    "PREMIUM_MEM_TYPE": {
+                      "query": "S",
+                      "boost": 4.0
+                    }
+                  }
+                },
+                {
+                  "match": {
+                    "CATG_NAME_ED1": {
+                      "query": "\"rice\"",
+                      "boost": 6.0
+                    }
+                  }
+                },
+                {
+                  "bool": {
+                    "boost": 3,
+                    "must": [
+                      {
+                        "match": {
+                          "VERIFIED_LEAD_TYPE": {
+                            "query": "V"
+                          }
+                        }
+                      },
+                      {
+                        "range": {
+                          "ADDDATE": {
+                            "gte": "now-1d/d"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "bool": {
+                    "boost": 2.8,
+                    "must": [
+                      {
+                        "match": {
+                          "VERIFIED_LEAD_TYPE": {
+                            "query": "V"
+                          }
+                        }
+                      },
+                      {
+                        "range": {
+                          "ADDDATE": {
+                            "gte": "now-2d/d"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "bool": {
+                    "boost": 2.5,
+                    "must": [
+                      {
+                        "match": {
+                          "VERIFIED_LEAD_TYPE": {
+                            "query": "V"
+                          }
+                        }
+                      },
+                      {
+                        "range": {
+                          "ADDDATE": {
+                            "gte": "now-1w"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "bool": {
+                    "boost": 2.2,
+                    "must": [
+                      {
+                        "match": {
+                          "VERIFIED_LEAD_TYPE": {
+                            "query": "V"
+                          }
+                        }
+                      },
+                      {
+                        "range": {
+                          "ADDDATE": {
+                            "gte": "now-1M"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "bool": {
+                    "boost": 2.1,
+                    "must": [
+                      {
+                        "match": {
+                          "VERIFIED_LEAD_TYPE": {
+                            "query": "V"
+                          }
+                        }
+                      },
+                      {
+                        "range": {
+                          "ADDDATE": {
+                            "gte": "now-6M"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "functions": [
+            {
+              "filter": {
+                "term": {
+                  "ARCHIVED": 0
+                }
+              },
+              "weight": 8
+            },
+            {
+              "filter": {
+                "term": {
+                  "ARCHIVED": 1
+                }
+              },
+              "weight": 0.1
+            },
+            {
+              "field_value_factor": {
+                "field": "MEMBER_RANK",
+                "factor": 0.0015,
+                "modifier": "log2p",
+                "missing": 1
+              }
+            }
+          ],
+          "boost_mode": "sum"
+        }
+      },
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "match_all": {}
+            },
+            {
+              "terms": {
+                "IS_SELL_ITEM": [
+                  "1"
+                ]
+              }
+            },
+            {
+              "match_all": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  "indices_boost": {
+    "go4_buyleads": 2.0,
+    "go4_pref_products": 1.4
+  },
+  "sort": [
+    "_score",
+    {
+      "MODDATE": {
+        "order": "desc"
+      }
+    }
+  ],
+  "aggregations": {
+    "countries": {
+      "terms": {
+        "field": "NOT_ANALYZED_COUNTRY_NAME",
+        "size": 20,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    },
+    "regions": {
+      "terms": {
+        "field": "CONTINENT_ID",
+        "size": 10,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    },
+    "dates": {
+      "date_range": {
+        "field": "MODDATE",
+        "format": "MM-yyy-dd",
+        "ranges": [
+          {
+            "key": "a",
+            "from": "now-3d/d"
+          },
+          {
+            "key": "b",
+            "from": "now-7d/d"
+          },
+          {
+            "key": "c",
+            "from": "now-30d/d"
+          },
+          {
+            "key": "d",
+            "from": "now-60d/d"
+          },
+          {
+            "key": "e",
+            "to": "now-60d/d"
+          }
+        ]
+      }
+    }
+  }
+}

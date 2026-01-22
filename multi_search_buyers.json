@@ -1,0 +1,292 @@
+{
+  "min_score": 1,
+  "query": {
+    "filtered": {
+      "query": {
+        "bool": {
+          "must": {
+            "dis_max": {
+              "queries": [
+                {
+                  "multi_match": {
+                    "query": "Wheat",
+                    "fields": [
+                      "BUYLEADS_EDIT_TEXT",
+                      "BUYLEADS_SUBJECT^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 0,
+                    "minimum_should_match": "100%",
+                    "boost": 2.0
+                  }
+                },
+                {
+                  "multi_match": {
+                    "query": "Rice",
+                    "fields": [
+                      "BUYLEADS_EDIT_TEXT",
+                      "BUYLEADS_SUBJECT^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 0,
+                    "minimum_should_match": "100%",
+                    "boost": 2.0
+                  }
+                },
+                {
+                  "multi_match": {
+                    "query": "Spices",
+                    "fields": [
+                      "BUYLEADS_EDIT_TEXT",
+                      "BUYLEADS_SUBJECT^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 0,
+                    "minimum_should_match": "100%",
+                    "boost": 2.0
+                  }
+                },
+                {
+                  "multi_match": {
+                    "query": "Pulses",
+                    "fields": [
+                      "BUYLEADS_EDIT_TEXT",
+                      "BUYLEADS_SUBJECT^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 0,
+                    "minimum_should_match": "100%",
+                    "boost": 2.0
+                  }
+                },
+                {
+                  "multi_match": {
+                    "query": "Fresh Fruits",
+                    "fields": [
+                      "BUYLEADS_EDIT_TEXT",
+                      "BUYLEADS_SUBJECT^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 0,
+                    "minimum_should_match": "100%",
+                    "boost": 2.0
+                  }
+                },
+                {
+                  "multi_match": {
+                    "query": "Fresh Vegetables",
+                    "fields": [
+                      "BUYLEADS_EDIT_TEXT",
+                      "BUYLEADS_SUBJECT^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 0,
+                    "minimum_should_match": "100%",
+                    "boost": 2.0
+                  }
+                },
+                {
+                  "multi_match": {
+                    "query": "Dairy Products",
+                    "fields": [
+                      "BUYLEADS_EDIT_TEXT",
+                      "BUYLEADS_SUBJECT^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 0,
+                    "minimum_should_match": "100%",
+                    "boost": 2.0
+                  }
+                },
+                {
+                  "multi_match": {
+                    "query": "Poultry",
+                    "fields": [
+                      "BUYLEADS_EDIT_TEXT",
+                      "BUYLEADS_SUBJECT^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 0,
+                    "minimum_should_match": "100%",
+                    "boost": 2.0
+                  }
+                },
+                {
+                  "multi_match": {
+                    "query": "Organic Produce",
+                    "fields": [
+                      "BUYLEADS_EDIT_TEXT",
+                      "BUYLEADS_SUBJECT^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 0,
+                    "minimum_should_match": "100%",
+                    "boost": 2.0
+                  }
+                },
+                {
+                  "multi_match": {
+                    "query": "Seafood",
+                    "fields": [
+                      "BUYLEADS_EDIT_TEXT",
+                      "BUYLEADS_SUBJECT^5"
+                    ],
+                    "type": "phrase",
+                    "slop": 0,
+                    "minimum_should_match": "100%",
+                    "boost": 2.0
+                  }
+                }
+              ]
+            }
+          },
+          "should": [
+            {
+              "match": {
+                "VERIFIED_LEAD_TYPE": {
+                  "query": "V",
+                  "boost": 2.5
+                }
+              }
+            },
+            {
+              "range": {
+                "ADDDATE": {
+                  "gte": "now-1d/d",
+                  "boost": 8.0
+                }
+              }
+            },
+            {
+              "range": {
+                "ADDDATE": {
+                  "gte": "now-2d/d",
+                  "boost": 7.6
+                }
+              }
+            },
+            {
+              "range": {
+                "ADDDATE": {
+                  "gte": "now-3d/d",
+                  "boost": 7.4
+                }
+              }
+            },
+            {
+              "range": {
+                "ADDDATE": {
+                  "gte": "now-4d/d",
+                  "boost": 7.2
+                }
+              }
+            },
+            {
+              "range": {
+                "ADDDATE": {
+                  "gte": "now-1w",
+                  "boost": 7.0
+                }
+              }
+            },
+            {
+              "range": {
+                "ADDDATE": {
+                  "gte": "now-1M",
+                  "boost": 5.6
+                }
+              }
+            },
+            {
+              "range": {
+                "ADDDATE": {
+                  "gte": "now-3M",
+                  "boost": 3.0
+                }
+              }
+            }
+          ]
+        }
+      },
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "match_all": {}
+            },
+            {
+              "terms": {
+                "IS_BUY_ITEM": [
+                  "1"
+                ]
+              }
+            },
+            {
+              "match_all": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  "sort": [
+    {
+      "ADDDATE": {
+        "order": "desc"
+      }
+    },
+    {
+      "_score": {
+        "order": "desc"
+      }
+    }
+  ],
+  "aggregations": {
+    "countries": {
+      "terms": {
+        "field": "NOT_ANALYZED_COUNTRY_NAME",
+        "size": 20,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    },
+    "regions": {
+      "terms": {
+        "field": "CONTINENT_ID",
+        "size": 10,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    },
+    "dates": {
+      "date_range": {
+        "field": "MODDATE",
+        "format": "MM-yyy-dd",
+        "ranges": [
+          {
+            "key": "a",
+            "from": "now-3d/d"
+          },
+          {
+            "key": "b",
+            "from": "now-7d/d"
+          },
+          {
+            "key": "c",
+            "from": "now-30d/d"
+          },
+          {
+            "key": "d",
+            "from": "now-60d/d"
+          },
+          {
+            "key": "e",
+            "to": "now-60d/d"
+          }
+        ]
+      }
+    }
+  }
+}

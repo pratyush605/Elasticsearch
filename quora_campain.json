@@ -1,0 +1,72 @@
+{
+  "settings": {
+      "analysis": {
+          "analyzer": {
+              "case_insensitive": {
+                  "type": "custom",
+                  "tokenizer": "keyword",
+                  "filter": [
+                      "lowercase"
+                  ]
+              }
+          },
+          "normalizer": {
+            "lowercase_normalizer": {
+              "type": "custom",
+              "filter": [
+                "lowercase"
+              ]
+            }
+          }
+      }
+  },
+  "mappings": {
+      "dynamic_templates": [
+          {
+              "en": {
+                  "match_mapping_type": "string",
+                  "match": "*",
+                  "mapping": {
+                      "type": "text",
+                      "analyzer": "english"
+                  }
+              }
+          }
+      ],
+      "properties": {
+        "ADDDATE": {
+          "type": "date",
+          "format": "strict_date_optional_time"
+        },
+        "ANSWER": {
+          "type": "text",
+          "analyzer": "english"
+        },
+        "FLAG": {
+          "type": "long"
+        },
+        "FINAL_FLAG": {
+          "type": "long"
+        },
+        "LINK": {
+          "type": "text",
+          "analyzer": "english"
+        },
+        "LOGSTASH_TRACKING_COLUMN": {
+          "type": "long"
+        },
+        "MODDATE": {
+          "type": "date",
+          "format": "strict_date_optional_time"
+        },
+        "NOT_ANALYZED_CATEGORY_NAME": {
+          "type": "keyword",
+          "normalizer": "lowercase_normalizer"
+        },
+        "QUESTION": {
+          "type": "text",
+          "analyzer": "english"
+        }
+      }
+  }
+}

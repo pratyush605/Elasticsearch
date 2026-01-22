@@ -1,0 +1,6847 @@
+{
+  "go4_commodity_prices_2025-10-14" : {
+    "mappings" : {
+      "commodity_prices" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ARRIVAL_DATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ARRIVAL_DAY" : {
+            "type" : "long"
+          },
+          "ARRIVAL_DAY_OF_WEEK" : {
+            "type" : "long"
+          },
+          "ARRIVAL_MONTH" : {
+            "type" : "long"
+          },
+          "ARRIVAL_YEAR" : {
+            "type" : "long"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMMODITY_DISTRICT_ID" : {
+            "type" : "long"
+          },
+          "COMMODITY_FULL_TEXT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COMMODITY_GRADE_ID" : {
+            "type" : "long"
+          },
+          "COMMODITY_ID" : {
+            "type" : "long"
+          },
+          "COMMODITY_MARKET_ID" : {
+            "type" : "long"
+          },
+          "COMMODITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COMMODITY_STATE_ID" : {
+            "type" : "long"
+          },
+          "COMMODITY_VARIETY_ID" : {
+            "type" : "long"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CREATED_AT" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "DATA_FRESHNESS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DISTRICT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "GRADE_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ID" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "LOCATION_FULL_TEXT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MARKET_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MAX_PRICE" : {
+            "type" : "double"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MIN_PRICE" : {
+            "type" : "double"
+          },
+          "MODAL_PRICE" : {
+            "type" : "double"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COMMODITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_DISTRICT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_GRADE_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MARKET_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_VARIETY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PRICE_RANGE" : {
+            "type" : "double"
+          },
+          "PRICE_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PRICE_VOLATILITY_PERCENT" : {
+            "type" : "double"
+          },
+          "SEARCH_FULL_TEXT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "UPDATED_AT" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "VARIETY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_communities_posts_2025-10-14" : {
+    "mappings" : {
+      "communities_posts" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ATTACHMENT_EXT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_ID" : {
+            "type" : "long"
+          },
+          "ATTACHMENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_SIZE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMMENT_COUNT" : {
+            "type" : "long"
+          },
+          "COMMUNITY_ID" : {
+            "type" : "long"
+          },
+          "COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CREATOR_ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CREATOR_CITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_COMPANY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "CREATOR_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_EMAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_ID" : {
+            "type" : "long"
+          },
+          "CREATOR_PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_PHOTO_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_STATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_EXP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_IMP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_SVC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "IS_BANNED" : {
+            "type" : "long"
+          },
+          "IS_SPAM" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMBER_RANK" : {
+            "type" : "long"
+          },
+          "MEMBER_RATING" : {
+            "type" : "double"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_TITLE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "POST_DOCUMENT_ID" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "POST_ID" : {
+            "type" : "long"
+          },
+          "PREMIUM_MEM_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "TITLE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USERNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "VERIFIED_MEM_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_processed_items_max_moddate_2025-01-25" : {
+    "mappings" : {
+      "processed_items_max_moddate" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "buylead_response" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "buyleads" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "categories" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "categories_content" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "communities_posts" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "inquiries" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "members" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "members_documents" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "pref_members" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "pref_products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ranks" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ratings" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "testimonials" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          }
+        }
+      }
+    }
+  },
+  "go4_communities_posts" : {
+    "mappings" : {
+      "communities_posts" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ATTACHMENT_EXT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_ID" : {
+            "type" : "long"
+          },
+          "ATTACHMENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_SIZE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMMENT_COUNT" : {
+            "type" : "long"
+          },
+          "COMMUNITY_ID" : {
+            "type" : "long"
+          },
+          "COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CREATOR_ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CREATOR_CITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_COMPANY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "CREATOR_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_EMAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_ID" : {
+            "type" : "long"
+          },
+          "CREATOR_PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_PHOTO_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_STATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_EXP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_IMP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_SVC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "IS_BANNED" : {
+            "type" : "long"
+          },
+          "IS_SPAM" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMBER_RANK" : {
+            "type" : "long"
+          },
+          "MEMBER_RATING" : {
+            "type" : "double"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_TITLE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "POST_DOCUMENT_ID" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "POST_ID" : {
+            "type" : "long"
+          },
+          "PREMIUM_MEM_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "TITLE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USERNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "VERIFIED_MEM_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_webinars_2024-03-02" : {
+    "mappings" : {
+      "webinars" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMPLETED" : {
+            "type" : "long"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "DURATION_MINS" : {
+            "type" : "long"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "FULL_DESC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "HOSTED_BY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "JOIN_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SHORT_DESC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "TITLE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "VIEW_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "WEBINAR_DATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          }
+        }
+      }
+    }
+  },
+  "go4_categories_content_2025-10-14" : {
+    "mappings" : {
+      "categories_content" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "BUYER_CATG_CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATEGORY_ID" : {
+            "type" : "long"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_CONTENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_CONTENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SUPPLIER_CATG_CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_ranks_2024-03-02" : {
+    "mappings" : {
+      "ranks" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CREATED_AT" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMBER_ID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "RULE_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "RULE_WEIGHT" : {
+            "type" : "long"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_deal_makr_suppliers_2024-03-02" : {
+    "mappings" : {
+      "deal_makr_suppliers" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATEGORY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMPANY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTACT_PERSON" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_PREGION_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_SREGION_ID" : {
+            "type" : "long"
+          },
+          "CURRENCY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEAL_MAKR_BUYER_ID" : {
+            "type" : "long"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "PAYMENT_TERMS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PRICE_PER_UNIT" : {
+            "type" : "double"
+          },
+          "PRICE_UNITS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PRODUCT_DESCRIPTION" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PRODUCT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "QUANTITY" : {
+            "type" : "double"
+          },
+          "QUANTITY_UNITS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SHIPPING_TERMS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_communities_2025-10-14" : {
+    "mappings" : {
+      "communities" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMMUNITY_ID" : {
+            "type" : "long"
+          },
+          "COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "DOCUMENT_ID" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "ICON" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "INFO" : {
+            "properties" : {
+              "backgroundImage" : {
+                "type" : "string",
+                "analyzer" : "english"
+              },
+              "description" : {
+                "type" : "string",
+                "analyzer" : "english"
+              },
+              "sections" : {
+                "properties" : {
+                  "cards" : {
+                    "properties" : {
+                      "content" : {
+                        "type" : "string",
+                        "analyzer" : "english"
+                      },
+                      "title" : {
+                        "type" : "string",
+                        "analyzer" : "english"
+                      }
+                    }
+                  },
+                  "title" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              },
+              "title" : {
+                "type" : "string",
+                "analyzer" : "english"
+              }
+            }
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_processed_items_max_moddate_2025-10-14" : {
+    "mappings" : {
+      "processed_items_max_moddate" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "buyleads" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "categories_content" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "commodity_prices" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "communities_posts" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "members" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "members_documents" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "pref_members" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "pref_products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ranks" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ratings" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "testimonials" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          }
+        }
+      }
+    }
+  },
+  "go4_categories_2024-03-02" : {
+    "mappings" : {
+      "categories" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_GRAND_PARENT" : {
+            "type" : "long"
+          },
+          "CATG_LEVEL" : {
+            "type" : "long"
+          },
+          "CATG_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_PARENT" : {
+            "type" : "long"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "GRAND_PARENT_CATG_LEVEL" : {
+            "type" : "long"
+          },
+          "GRAND_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "PARENT_CATG_LEVEL" : {
+            "type" : "long"
+          },
+          "PARENT_CATG_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_pref_products_2024-03-02" : {
+    "mappings" : {
+      "pref_products" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ADDDATE_PRODUCTS" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "BRAND" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CAPACITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATEGORIES" : {
+            "properties" : {
+              "" : {
+                "properties" : {
+                  "CATG_TYPE" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              },
+              "ID" : {
+                "properties" : {
+                  "CATG_ID1" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID2" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID3" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID4" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID5" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID6" : {
+                    "type" : "long"
+                  }
+                }
+              },
+              "NAME" : {
+                "properties" : {
+                  "CATG_NAME_ED1" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED2" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED3" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED4" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED5" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED6" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              }
+            }
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COMPNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_PREGION_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_SREGION_ID" : {
+            "type" : "long"
+          },
+          "DEALSIN_EXP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_IMP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_SVC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DELIVERY_TIME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DELIVERY_TIME_QTY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DELIVERY_TIME_UNITS" : {
+            "type" : "long"
+          },
+          "DESCRIPTION" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DESCRIPTION_PRODUCTS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "EMAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "HAS_IMAGE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "HS_CODE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "IMAGE_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "INCOTERM" : {
+            "type" : "long"
+          },
+          "IS_BUY_ITEM" : {
+            "type" : "long"
+          },
+          "IS_SELL_ITEM" : {
+            "type" : "long"
+          },
+          "KEYWORD1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEYWORD2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEYWORD3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEYWORD4" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEY_ADV1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEY_ADV2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEY_ADV3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEY_ADV4" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEY_SPEC1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEY_SPEC2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEY_SPEC3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEY_SPEC4" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "LAST_MEM_ACTIVITY_DATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MATCH_EMAIL_FREQUENCY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEMBER_ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "MEMBER_FLAG" : {
+            "type" : "long"
+          },
+          "MEMBER_RANK" : {
+            "type" : "long"
+          },
+          "MEMBER_RATING" : {
+            "type" : "double"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MFG_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "MODDATE_PRODUCTS" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "MODEL_NO" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MATCH_EMAIL_FREQUENCY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "ORG_ID" : {
+            "type" : "long"
+          },
+          "PACK_DETAILS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREMIUM_MEM_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "PRODUCT_GRADE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "RATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "RATE_UNIT" : {
+            "type" : "long"
+          },
+          "SAMPLE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SAMPLE_COST" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SELLERCODE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SELLER_ID" : {
+            "type" : "long"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SHORT_DESC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STANDARDS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STATUS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USERNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USER_CONSENT" : {
+            "type" : "long"
+          },
+          "VERIFIED_MEM_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_members_2024-03-02" : {
+    "mappings" : {
+      "members" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ADDDATE_DAY" : {
+            "type" : "long"
+          },
+          "ADDDATE_MONTH" : {
+            "type" : "long"
+          },
+          "ADDDATE_YEAR" : {
+            "type" : "long"
+          },
+          "ADDRESS1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ADDRESS2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ADDRESS3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ADDRESS4" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "BSNS_SALE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "BSNS_SCALE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "BSNS_YEAR" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CAN_RECVINQ" : {
+            "type" : "long"
+          },
+          "CATEGORIES" : {
+            "properties" : {
+              "" : {
+                "properties" : {
+                  "CATG_TYPE" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              },
+              "ID" : {
+                "properties" : {
+                  "CATG_ID1" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID2" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID3" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID4" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID5" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID6" : {
+                    "type" : "long"
+                  },
+                  "CATG_LEVEL1" : {
+                    "type" : "long"
+                  }
+                }
+              },
+              "NAME" : {
+                "properties" : {
+                  "CATG_NAME_ED1" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED2" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED3" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED4" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED5" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED6" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID1" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID2" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID3" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID4" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID5" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID6" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD1" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD2" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD3" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD4" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD5" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD6" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              }
+            }
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COMPNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_PREGION_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_SREGION_ID" : {
+            "type" : "long"
+          },
+          "DEALSIN_EXP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_IMP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_SVC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DESIGNATION" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "EMAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "EXP_MKT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FAX" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "HIDE_SITE_ON_MARKETING_PAGE" : {
+            "type" : "long"
+          },
+          "HOMEPAGE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "IS_BUY_ITEM" : {
+            "type" : "long"
+          },
+          "IS_SELL_ITEM" : {
+            "type" : "long"
+          },
+          "LAST_MEM_ACTIVITY_DATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MATCH_EMAIL_FREQUENCY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEMBER_RANK" : {
+            "type" : "long"
+          },
+          "MEMBER_RATING" : {
+            "type" : "double"
+          },
+          "MEMID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEM_CATG_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEM_TYPE" : {
+            "type" : "long"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MATCH_EMAIL_FREQUENCY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_WEBSITE_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREMIUM_MEMBER_SINCE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "PREMIUM_MEM_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "RANK" : {
+            "type" : "long"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SHOW_PHONE" : {
+            "type" : "long"
+          },
+          "STANDARDS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STATUS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USERNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USER_CONSENT" : {
+            "type" : "long"
+          },
+          "VERIFIED_MEM_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "WORDPRESS_DOMAIN" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "WP_WEBSITE_STATUS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ZIP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_processed_items_max_moddate_2024-03-02" : {
+    "mappings" : {
+      "processed_items_max_moddate" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "banned_products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "buylead_response" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "buyleads" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "categories" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "categories_list" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "countries" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "deal_makr_buyers" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "deal_makr_suppliers" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "inquiries" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "members" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "members_documents" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "pref_members" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "pref_products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "quora_campaign" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ranks" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ratings" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "related_products" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "spam_emails" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "spam_messages" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "testimonials" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "tradeleads" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "webinars" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          }
+        }
+      }
+    }
+  },
+  "go4_countries_2024-03-02" : {
+    "mappings" : {
+      "countries" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_NATIONALITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_NATIONALITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_categories_2025-01-21" : {
+    "mappings" : {
+      "categories" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_GRAND_PARENT" : {
+            "type" : "long"
+          },
+          "CATG_LEVEL" : {
+            "type" : "long"
+          },
+          "CATG_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_PARENT" : {
+            "type" : "long"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "GRAND_PARENT_CATG_LEVEL" : {
+            "type" : "long"
+          },
+          "GRAND_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "PARENT_CATG_LEVEL" : {
+            "type" : "long"
+          },
+          "PARENT_CATG_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SUPPLIER_CATG_CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_products_2024-03-02" : {
+    "mappings" : {
+      "products" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATEGORIES" : {
+            "properties" : {
+              "" : {
+                "properties" : {
+                  "CATG_TYPE" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              },
+              "ID" : {
+                "properties" : {
+                  "CATG_ID1" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID2" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID3" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID4" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID5" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID6" : {
+                    "type" : "long"
+                  }
+                }
+              },
+              "NAME" : {
+                "properties" : {
+                  "CATG_NAME_ED1" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED2" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED3" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED4" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED5" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED6" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              }
+            }
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COMPNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_PREGION_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_SREGION_ID" : {
+            "type" : "long"
+          },
+          "DEALSIN_EXP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_IMP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_SVC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DESCRIPTION" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "EMAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "HAS_IMAGE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "INCOTERM" : {
+            "type" : "long"
+          },
+          "IS_BUY_ITEM" : {
+            "type" : "long"
+          },
+          "IS_SELL_ITEM" : {
+            "type" : "long"
+          },
+          "KEYWORD1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEYWORD2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEYWORD3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "KEYWORD4" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "LAST_MEM_ACTIVITY_DATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MATCH_EMAIL_FREQUENCY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEMBER_ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "MEMBER_FLAG" : {
+            "type" : "long"
+          },
+          "MEMBER_RANK" : {
+            "type" : "long"
+          },
+          "MEMBER_RATING" : {
+            "type" : "double"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MATCH_EMAIL_FREQUENCY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "ORG_ID" : {
+            "type" : "long"
+          },
+          "PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREMIUM_MEM_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "PRODUCT_GRADE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "RATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "RATE_UNIT" : {
+            "type" : "long"
+          },
+          "SELLERCODE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SELLER_ID" : {
+            "type" : "long"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SHORT_DESC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STATUS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USERNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USER_CONSENT" : {
+            "type" : "long"
+          },
+          "VERIFIED_MEM_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_categories_content" : {
+    "mappings" : {
+      "categories_content" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "BUYER_CATG_CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATEGORY_ID" : {
+            "type" : "long"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_CONTENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATG_CONTENT_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SUPPLIER_CATG_CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_processed_items_max_moddate_2025-11-03" : {
+    "mappings" : {
+      "processed_items_max_moddate" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "buyleads" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "categories_content" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "categories_faq" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "communities_posts" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "members" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "members_documents" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "pref_members" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "pref_products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ranks" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ratings" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "testimonials" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          }
+        }
+      }
+    }
+  },
+  "go4_related_products_2024-03-02" : {
+    "mappings" : {
+      "related_products" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "KEYWORD" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "RELATED_KEYWORDS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_testimonials_2024-03-02" : {
+    "mappings" : {
+      "testimonials" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATEGORIES" : {
+            "properties" : {
+              "CATG_TYPE" : {
+                "type" : "string",
+                "analyzer" : "english"
+              },
+              "NAME" : {
+                "properties" : {
+                  "CATG_NAME_ED1" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED2" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED3" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED4" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED5" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ED6" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID1" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID2" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID3" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID4" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID5" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID6" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD1" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD2" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD3" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD4" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD5" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_SD6" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              }
+            }
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMPANY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNRTY_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATED_ON" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGO_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEMBER_ID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "RATING" : {
+            "type" : "long"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "TESTIMONIAL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USERNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_communities" : {
+    "mappings" : {
+      "communities" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMMUNITY_ID" : {
+            "type" : "long"
+          },
+          "COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "DOCUMENT_ID" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "ICON" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "INFO" : {
+            "properties" : {
+              "backgroundImage" : {
+                "type" : "string",
+                "analyzer" : "english"
+              },
+              "description" : {
+                "type" : "string",
+                "analyzer" : "english"
+              },
+              "sections" : {
+                "properties" : {
+                  "cards" : {
+                    "properties" : {
+                      "content" : {
+                        "type" : "string",
+                        "analyzer" : "english"
+                      },
+                      "title" : {
+                        "type" : "string",
+                        "analyzer" : "english"
+                      }
+                    }
+                  },
+                  "title" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              },
+              "title" : {
+                "type" : "string",
+                "analyzer" : "english"
+              }
+            }
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COMMUNITY_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_spam_emails_2024-03-02" : {
+    "mappings" : {
+      "spam_emails" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "EMAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MAIL_DOMAIN" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_inquiries_2024-03-02" : {
+    "mappings" : {
+      "inquiries" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ADDRESS1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ADDRESS2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ADDRESS3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ADDRESS4" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "AUTOMATED_SPAM_FLAG" : {
+            "type" : "long"
+          },
+          "CAN_RECVINQ" : {
+            "type" : "long"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CLIENT_ID" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COMPNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_PER_IP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_PREGION_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_SREGION_ID" : {
+            "type" : "long"
+          },
+          "DEALSIN_EXP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_IMP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_SVC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "EMAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FAX" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "HOMEPAGE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "INQTYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "IS_BUY_ITEM" : {
+            "type" : "long"
+          },
+          "IS_REVIEWED" : {
+            "type" : "long"
+          },
+          "IS_SELL_ITEM" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEMID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEM_ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "MEM_FLAG" : {
+            "type" : "long"
+          },
+          "MEM_ID" : {
+            "type" : "long"
+          },
+          "MEM_TYPE" : {
+            "type" : "long"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREMIUM_MEM_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "REVIEWED_BY" : {
+            "type" : "long"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SENDER_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDER_PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SPAM_FLAG" : {
+            "type" : "long"
+          },
+          "STATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SUBJECT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USERNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USER_ID" : {
+            "type" : "long"
+          },
+          "VERIFIED_MEM_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ZIP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_categories_content_2025-11-03" : {
+    "mappings" : {
+      "categories_content" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "BUYER_CATG_CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATEGORY_ID" : {
+            "type" : "long"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_CONTENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_CONTENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SUPPLIER_CATG_CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_buyleads_2024-03-02" : {
+    "mappings" : {
+      "buyleads" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ADDRESS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ALT_EMAILS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ALT_PHONES" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ARCHIVED" : {
+            "type" : "long"
+          },
+          "BATCH_ID" : {
+            "type" : "long"
+          },
+          "BUYLEADS_EDIT_TEXT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "BUYLEADS_FULL_TEXT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "BUYLEADS_SUBJECT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATEGORIES" : {
+            "properties" : {
+              "" : {
+                "properties" : {
+                  "CATG_TYPE" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              },
+              "ID" : {
+                "properties" : {
+                  "CATG_ID1" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID2" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID3" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID4" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID5" : {
+                    "type" : "long"
+                  },
+                  "CATG_ID6" : {
+                    "type" : "long"
+                  }
+                }
+              },
+              "NAME" : {
+                "properties" : {
+                  "CATG_NAME_ID1" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID2" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID3" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID4" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID5" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  },
+                  "CATG_NAME_ID6" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              }
+            }
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COMPNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTACT_EMAIL_ONLY" : {
+            "type" : "long"
+          },
+          "CONTACT_PERSON" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_PREFERENCE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_PREFERENCE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_PREGION_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_SREGION_ID" : {
+            "type" : "long"
+          },
+          "DEAL_SIZE_CURRENCY_CODE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEAL_SIZE_CURRENCY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DESIGNATION" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DESTINATION_COUNTRY_CODE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DESTINATION_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DESTINATION_PORT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "EMAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "EMAIL_VERIFIED" : {
+            "type" : "long"
+          },
+          "EXCLUDED_CONTINENTS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "EXCLUDED_COUNTRIES" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FAX" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "IS_BUY_ITEM" : {
+            "type" : "long"
+          },
+          "IS_SAMPLE" : {
+            "type" : "long"
+          },
+          "IS_SELL_ITEM" : {
+            "type" : "long"
+          },
+          "LEADTTOINQ_ID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MAX_DEAL_SIZE" : {
+            "type" : "double"
+          },
+          "MAX_QUANTITY" : {
+            "type" : "double"
+          },
+          "MAX_TARGET_PRICE" : {
+            "type" : "double"
+          },
+          "MEMID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MIN_DEAL_SIZE" : {
+            "type" : "double"
+          },
+          "MIN_QUANTITY" : {
+            "type" : "double"
+          },
+          "MIN_TARGET_PRICE" : {
+            "type" : "double"
+          },
+          "MOBILE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MOBILE_VERIFIED" : {
+            "type" : "long"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "PACKAGING_TERMS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PAYMENT_TERMS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PHONE_VERIFIED" : {
+            "type" : "long"
+          },
+          "PRICE_PER_UNIT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PRICE_UNITS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "QUANTITY_DURATION" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "QUANTITY_UNITS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "REQUIREMENT_IN_DAYS" : {
+            "type" : "long"
+          },
+          "REQUIREMENT_NATURE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SHIPPING_TERMS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "TARGET_COUNTRIES" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "TARGET_PRICE_CURRENCY_CODE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "TARGET_PRICE_CURRENCY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USER_CONSENT" : {
+            "type" : "long"
+          },
+          "VERIFIED_LEAD_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "ZIP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_communities_posts_2025-11-03" : {
+    "mappings" : {
+      "communities_posts" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ATTACHMENT_EXT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_ID" : {
+            "type" : "long"
+          },
+          "ATTACHMENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_SIZE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ATTACHMENT_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMMENT_COUNT" : {
+            "type" : "long"
+          },
+          "COMMUNITY_ID" : {
+            "type" : "long"
+          },
+          "COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CREATOR_ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CREATOR_CITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_COMPANY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "CREATOR_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_EMAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_ID" : {
+            "type" : "long"
+          },
+          "CREATOR_PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_PHOTO_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CREATOR_STATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_EXP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_IMP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_SVC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "IS_BANNED" : {
+            "type" : "long"
+          },
+          "IS_SPAM" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMBER_RANK" : {
+            "type" : "long"
+          },
+          "MEMBER_RATING" : {
+            "type" : "double"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_TITLE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "POST_DOCUMENT_ID" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "POST_ID" : {
+            "type" : "long"
+          },
+          "PREMIUM_MEM_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "TITLE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USERNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "VERIFIED_MEM_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_categories_faq_2025-11-03" : {
+    "mappings" : {
+      "categories_faq" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_tradeleads_2024-03-02" : {
+    "mappings" : {
+      "tradeleads" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "VERIFIED_LEAD_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_spam_messages_2024-03-02" : {
+    "mappings" : {
+      "spam_messages" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MESSAGE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_ratings_2024-03-02" : {
+    "mappings" : {
+      "ratings" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ACTIVE" : {
+            "type" : "long"
+          },
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CREATED_AT" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMBER_ID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "RANKER_ID" : {
+            "type" : "long"
+          },
+          "RATING" : {
+            "type" : "long"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "TEXT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "TITLE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_communities_2025-11-03" : {
+    "mappings" : {
+      "communities" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMMUNITY_ID" : {
+            "type" : "long"
+          },
+          "COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "DOCUMENT_ID" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "ICON" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "INFO" : {
+            "properties" : {
+              "backgroundImage" : {
+                "type" : "string",
+                "analyzer" : "english"
+              },
+              "description" : {
+                "type" : "string",
+                "analyzer" : "english"
+              },
+              "sections" : {
+                "properties" : {
+                  "cards" : {
+                    "properties" : {
+                      "content" : {
+                        "type" : "string",
+                        "analyzer" : "english"
+                      },
+                      "title" : {
+                        "type" : "string",
+                        "analyzer" : "english"
+                      }
+                    }
+                  },
+                  "title" : {
+                    "type" : "string",
+                    "analyzer" : "english"
+                  }
+                }
+              },
+              "title" : {
+                "type" : "string",
+                "analyzer" : "english"
+              }
+            }
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COMMUNITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_categories_list_2024-03-02" : {
+    "mappings" : {
+      "categories_list" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_CODE1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE4" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE5" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE6" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_ID1" : {
+            "type" : "long"
+          },
+          "CATG_ID2" : {
+            "type" : "long"
+          },
+          "CATG_ID3" : {
+            "type" : "long"
+          },
+          "CATG_ID4" : {
+            "type" : "long"
+          },
+          "CATG_ID5" : {
+            "type" : "long"
+          },
+          "CATG_ID6" : {
+            "type" : "long"
+          },
+          "CATG_LEVEL1" : {
+            "type" : "long"
+          },
+          "CATG_LEVEL2" : {
+            "type" : "long"
+          },
+          "CATG_LEVEL3" : {
+            "type" : "long"
+          },
+          "CATG_LEVEL4" : {
+            "type" : "long"
+          },
+          "CATG_LEVEL5" : {
+            "type" : "long"
+          },
+          "CATG_LEVEL6" : {
+            "type" : "long"
+          },
+          "CATG_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_NAME1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_NAME2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_NAME3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_NAME4" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_NAME5" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_NAME6" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_PARENT1" : {
+            "type" : "long"
+          },
+          "CATG_PARENT2" : {
+            "type" : "long"
+          },
+          "CATG_PARENT3" : {
+            "type" : "long"
+          },
+          "CATG_PARENT4" : {
+            "type" : "long"
+          },
+          "CATG_PARENT5" : {
+            "type" : "long"
+          },
+          "CATG_PARENT6" : {
+            "type" : "long"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_TYPE2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_TYPE3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_TYPE4" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_TYPE5" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_TYPE6" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_pref_members_2024-03-02" : {
+    "mappings" : {
+      "pref_members" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ADDRESS1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ADDRESS2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ADDRESS3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ADDRESS4" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "BANKERS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "BSNS_SALE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "BSNS_SCALE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "BSNS_YEAR" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CAN_RECVINQ" : {
+            "type" : "long"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CITY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COMPNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "DEALSIN_EXP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_IMP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DEALSIN_SVC" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DESIGNATION" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "EMAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "EXP_MKT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FAX" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "HOMEPAGE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "IMAGE1_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "IMAGE2_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "IMAGE_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "INVST_MFG" : {
+            "type" : "long"
+          },
+          "INVST_RD" : {
+            "type" : "long"
+          },
+          "IS_BUY_ITEM" : {
+            "type" : "long"
+          },
+          "IS_SELL_ITEM" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGO_URL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MATCH_EMAIL_FREQUENCY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEMBER_RANK" : {
+            "type" : "long"
+          },
+          "MEMBER_RATING" : {
+            "type" : "double"
+          },
+          "MEMID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMO_FACTORY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEMO_MACHINARY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEMO_MATERIAL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEM_TYPE" : {
+            "type" : "long"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MATCH_EMAIL_FREQUENCY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "OEM" : {
+            "type" : "long"
+          },
+          "OWNER" : {
+            "type" : "long"
+          },
+          "PAGE_CMP" : {
+            "type" : "long"
+          },
+          "PAGE_FCT" : {
+            "type" : "long"
+          },
+          "PAGE_HOME" : {
+            "type" : "long"
+          },
+          "PAGE_MEDIA" : {
+            "type" : "long"
+          },
+          "PAGE_MGM" : {
+            "type" : "long"
+          },
+          "PAGE_PROD" : {
+            "type" : "long"
+          },
+          "PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PRDLINE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_HOME_MEMO_1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_HOME_MEMO_2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_HOME_MEMO_3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MEDIA_MEMO_1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MEDIA_MEMO_1_IMG" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MEDIA_MEMO_2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MEDIA_MEMO_2_IMG" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MEDIA_MEMO_3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MEDIA_MEMO_3_IMG" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MEDIA_MEMO_INTRO" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MGMT_MEMO_1" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MGMT_MEMO_1_IMG" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MGMT_MEMO_2" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MGMT_MEMO_2_IMG" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MGMT_MEMO_3" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MGMT_MEMO_3_IMG" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MGMT_MEMO_INTRO" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREFMEM_MGM_CONSOLE_STATUS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PREMIUM_MEM_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "QC" : {
+            "type" : "long"
+          },
+          "RANK" : {
+            "type" : "long"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SHOW_PHONE" : {
+            "type" : "long"
+          },
+          "SOURCE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STAFF_ENG" : {
+            "type" : "long"
+          },
+          "STAFF_NET" : {
+            "type" : "long"
+          },
+          "STAFF_PRD" : {
+            "type" : "long"
+          },
+          "STAFF_QC" : {
+            "type" : "long"
+          },
+          "STAFF_RD" : {
+            "type" : "long"
+          },
+          "STAFF_SALES" : {
+            "type" : "long"
+          },
+          "STANDARDS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STATE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STATUS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "USERNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "VERSION" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ZIP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_buylead_response_2024-03-02" : {
+    "mappings" : {
+      "buylead_response" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "AVG_RATING" : {
+            "type" : "double"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMPNAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_PER_IP" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "INQTYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ITEM_ID" : {
+            "type" : "long"
+          },
+          "ITEM_MEMID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MAIL" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "MEMBER_FLAG" : {
+            "type" : "long"
+          },
+          "MEMBER_RANK" : {
+            "type" : "long"
+          },
+          "MEMBER_RATING" : {
+            "type" : "double"
+          },
+          "MEMID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "PREMIUM_MEM_TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "REPLIED_DATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SENDER_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDER_PHONE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "STATUS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "TYPE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "VERIFIED" : {
+            "type" : "long"
+          }
+        }
+      }
+    }
+  },
+  "go4_categories_2025-01-25" : {
+    "mappings" : {
+      "categories" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "BUYER_CATG_CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_GRAND_PARENT" : {
+            "type" : "long"
+          },
+          "CATG_LEVEL" : {
+            "type" : "long"
+          },
+          "CATG_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_PARENT" : {
+            "type" : "long"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "GRAND_PARENT_CATG_LEVEL" : {
+            "type" : "long"
+          },
+          "GRAND_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "PARENT_CATG_LEVEL" : {
+            "type" : "long"
+          },
+          "PARENT_CATG_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SUPPLIER_CATG_CONTENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_members_documents_2024-03-02" : {
+    "mappings" : {
+      "members_documents" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ATTACHMENT" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CREATED_AT" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "DELETED_AT" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "DOC_CATG" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DOC_ID" : {
+            "type" : "long"
+          },
+          "DOC_MAIN_CATG" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DOC_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "DOC_VERIFICATION_STATUS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "ID" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "VERSION" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_processed_items_max_moddate_2025-01-21" : {
+    "mappings" : {
+      "processed_items_max_moddate" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "buylead_response" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "buyleads" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "categories" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "members" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "members_documents" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "pref_members" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "pref_products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "products" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ranks" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ratings" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "testimonials" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          }
+        }
+      }
+    }
+  },
+  "go4_deal_makr_buyers_2024-03-02" : {
+    "mappings" : {
+      "deal_makr_buyers" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "CATEGORY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COMPANY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTACT_PERSON" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "COUNTRY_PREGION_ID" : {
+            "type" : "long"
+          },
+          "COUNTRY_SREGION_ID" : {
+            "type" : "long"
+          },
+          "CURRENCY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMID" : {
+            "type" : "long"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_WEB_STATUS" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "PAYMENT_TERMS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PRICE_PER_UNIT" : {
+            "type" : "double"
+          },
+          "PRICE_UNITS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "PRODUCT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "QUANTITY" : {
+            "type" : "double"
+          },
+          "QUANTITY_UNITS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "REQUIREMENT_DETAILS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "SHIPPING_TERMS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "WEB_STATUS" : {
+            "type" : "string",
+            "analyzer" : "english"
+          }
+        }
+      }
+    }
+  },
+  "go4_quora_campaign_2024-03-02" : {
+    "mappings" : {
+      "quora_campaign" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "ANSWER" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "FLAG" : {
+            "type" : "long"
+          },
+          "LINK" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "QUESTION" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  },
+  "go4_banned_products_2024-03-02" : {
+    "mappings" : {
+      "banned_products" : {
+        "dynamic_templates" : [ {
+          "en" : {
+            "mapping" : {
+              "analyzer" : "english",
+              "type" : "string"
+            },
+            "match" : "*",
+            "match_mapping_type" : "string"
+          }
+        } ],
+        "properties" : {
+          "ADDDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "BY_NCB" : {
+            "type" : "long"
+          },
+          "CAS_NUMBER" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "CATEGORY" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "CATG_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CATG_TYPE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "CONTINENT_ID" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "COUNTRY_CODE" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "EXACT_MATCH" : {
+            "type" : "long"
+          },
+          "HAS_CODE" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "LOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MEMLOGIN" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "MODDATE" : {
+            "type" : "date",
+            "format" : "dateOptionalTime"
+          },
+          "NOT_ANALYZED_CATEGORY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_CITY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_COUNTRY_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "NOT_ANALYZED_GRANDPARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_MAIN_CATEGORY" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_PARENT_CATG_NAME" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          },
+          "NOT_ANALYZED_STATE_NAME" : {
+            "type" : "string",
+            "analyzer" : "case_insensitive"
+          },
+          "PRODUCT_NAME" : {
+            "type" : "string",
+            "analyzer" : "english"
+          },
+          "SENDEREMAIL" : {
+            "type" : "string",
+            "index" : "not_analyzed"
+          }
+        }
+      }
+    }
+  }
+}

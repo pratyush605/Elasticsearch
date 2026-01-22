@@ -1,0 +1,193 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "case_insensitive": {
+          "type": "custom",
+          "tokenizer": "keyword",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "en": {
+          "match_mapping_type": "string",
+          "match": "*",
+          "mapping": {
+            "type": "text",
+            "analyzer": "english"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "ADDDATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "CATEGORIES": {
+        "properties": {
+          "CATG_TYPE": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED1": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED2": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED3": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED4": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED5": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ED6": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID1": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID2": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID3": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID4": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_ID5": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_SD1": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_SD2": {
+            "type": "text",
+            "analyzer": "english"
+          },
+          "CATG_NAME_SD3": {
+            "type": "text",
+            "analyzer": "english"
+          }
+        }
+      },
+      "CATG_CODE": {
+        "type": "keyword"
+      },
+      "CATG_TYPE": {
+        "type": "keyword"
+      },
+      "COMPANY_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CONTINENT_ID": {
+        "type": "keyword"
+      },
+      "COUNRTY_ID": {
+        "type": "long"
+      },
+      "COUNTRY_CODE": {
+        "type": "keyword"
+      },
+      "COUNTRY_NAME": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "CREATED_ON": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "LOGIN": {
+        "type": "keyword"
+      },
+      "LOGO_URL": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "MEMBER_ID": {
+        "type": "long"
+      },
+      "MEMLOGIN": {
+        "type": "keyword"
+      },
+      "MODDATE": {
+        "type": "date",
+        "format": "strict_date_optional_time"
+      },
+      "NOT_ANALYZED_CATEGORY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_CITY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_COUNTRY_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "NOT_ANALYZED_GRANDPARENT_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_MAIN_CATEGORY": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_PARENT_CATG_NAME": {
+        "type": "keyword"
+      },
+      "NOT_ANALYZED_STATE_NAME": {
+        "type": "keyword",
+        "normalizer": "lowercase_normalizer"
+      },
+      "RATING": {
+        "type": "long"
+      },
+      "SENDEREMAIL": {
+        "type": "keyword"
+      },
+      "TESTIMONIAL": {
+        "type": "text",
+        "analyzer": "english"
+      },
+      "USERNAME": {
+        "type": "text",
+        "analyzer": "english"
+      }
+    }
+  }
+}
