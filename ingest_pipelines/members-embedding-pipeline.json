@@ -1,0 +1,40 @@
+{
+  "PUT _ingest/pipeline/members-embedding-pipeline": {
+    "processors": [
+      {
+        "inference": {
+          "model_id": ".multilingual-e5-small-elasticsearch",
+          "input_output": [
+            {
+              "input_field": "BUSINESS_DOMAIN_TEXT",
+              "output_field": "BUSINESS_DOMAIN_VECTOR"
+            },
+            {
+              "input_field": "COMPLIANCE_TEXT",
+              "output_field": "COMPLIANCE_VECTOR"
+            },
+            {
+              "input_field": "GEOGRAPHY_TEXT",
+              "output_field": "GEOGRAPHY_VECTOR"
+            },
+            {
+              "input_field": "IDENTITY_TEXT",
+              "output_field": "IDENTITY_VECTOR"
+            }
+          ]
+        }
+      },
+      {
+        "remove": {
+          "field": [
+            "BUSINESS_DOMAIN_TEXT",
+            "COMPLIANCE_TEXT",
+            "GEOGRAPHY_TEXT",
+            "IDENTITY_TEXT"
+          ],
+          "ignore_missing": true
+        }
+      }
+    ]
+  }
+}

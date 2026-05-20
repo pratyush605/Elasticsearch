@@ -1,0 +1,37 @@
+.multilingual-e5-small-elasticsearch
+_inference/text_embedding/.multilingual-e5-small-elasticsearch
+Buy lead subject: 240GSM cotton T shirts.  Buyer requirement: Buyer wants to purchase 240 GSM plain cotton T-shirts in multiple colors and requests product pricing and minimum order quantity.  Product category: Beans, Oil Seeds, Farm Products, Agriculture and Food, Products.  Buyer company: YOYO Inc.  Buyer location: Mumbai, Chattisgarh, India, Asia.  Destination port: Mumbai.  Target countries: China, Africa, Pakistan.  Quantity requirement: Weekly supply, minimum quantity 3, maximum quantity 2.  Price range: Minimum target price 1 CUC, maximum target price 2 CUC.  Currency: Sao Tome/Principe Dobra, Cuban Convertible Peso.  Buyer contact details: Shivam, email shivam@go4worldbusiness.com, alternate email email@email.com, mobile verified.  Keywords: beans, Kidney Beans, Red Kidney Beans.  Full requirement text: I want to buy 240GSM plain cotton T shirts in multiple colors please let me know the product pricing and minimum order quantity.
+
+
+BUYLEADS_SUBJECT : %{BUYLEADS_SUBJECT}
+BUYLEADS_FULL_TEXT : %{BUYLEADS_FULL_TEXT}
+BUYLEADS_EDIT_TEXT : %{BUYLEADS_EDIT_TEXT}
+CATG_NAME_ID1 : %{CATG_NAME_ID1}
+CATG_NAME_ID2 : %{CATG_NAME_ID2}
+CATG_NAME_ID3 : %{CATG_NAME_ID3}
+CATG_NAME_ID4 : %{CATG_NAME_ID4}
+CATG_NAME_ID5 : %{CATG_NAME_ID5}
+CATG_NAME_ID6 : %{CATG_NAME_ID6}
+KEYWORDS1 : %{KEYWORDS1}
+KEYWORDS2 : %{KEYWORDS2}
+KEYWORDS3 : %{KEYWORDS3}
+KEYWORDS4 : %{KEYWORDS4}
+KEYWORDS5 : %{KEYWORDS5}
+COMPNAME : %{COMPNAME}
+CITY : %{CITY}
+CONTINENT_NAME : %{CONTINENT_NAME}
+COUNTRY_NAME : %{COUNTRY_NAME}
+DEAL_SIZE_CURRENCY_NAME : %{DEAL_SIZE_CURRENCY_NAME}
+DESTINATION_COUNTRY_NAME : %{DESTINATION_COUNTRY_NAME}
+DESTINATION_PORT : %{DESTINATION_PORT}
+PACKAGING_TERMS : %{PACKAGING_TERMS}
+PAYMENT_TERMS : %{PAYMENT_TERMS}
+PRICE_UNITS : %{PRICE_UNITS}
+PRICE_PER_UNIT : %{PRICE_PER_UNIT}
+QUANTITY_DURATION : %{QUANTITY_DURATION}
+QUANTITY_UNITS : %{QUANTITY_UNITS}
+REQUIREMENT_NATURE : %{REQUIREMENT_NATURE}
+SHIPPING_TERMS : %{SHIPPING_TERMS}
+STATE : %{STATE}
+TARGET_COUNTRIES : %{TARGET_COUNTRIES}
+TARGET_PRICE_CURRENCY_NAME : %{TARGET_PRICE_CURRENCY_NAME}

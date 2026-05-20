@@ -1,0 +1,280 @@
+{
+  "aggregations": {
+    "regions": {
+      "terms": {
+        "field": "CONTINENT_ID",
+        "order": [
+          {
+            "_count": "desc"
+          }
+        ],
+        "size": 10
+      }
+    },
+    "dates": {
+      "date_range": {
+        "field": "MODDATE",
+        "format": "MM-yyy-dd",
+        "ranges": [
+          {
+            "from": "now-3d/d",
+            "key": "a"
+          },
+          {
+            "from": "now-7d/d",
+            "key": "b"
+          },
+          {
+            "from": "now-30d/d",
+            "key": "c"
+          },
+          {
+            "from": "now-60d/d",
+            "key": "d"
+          },
+          {
+            "key": "e",
+            "to": "now-60d/d"
+          }
+        ]
+      }
+    },
+    "countries": {
+      "terms": {
+        "field": "NOT_ANALYZED_COUNTRY_NAME",
+        "order": [
+          {
+            "_count": "desc"
+          }
+        ],
+        "size": 20
+      }
+    }
+  },
+  "from": 0,
+  "indices_boost": [
+    {
+      "go4_pref_products_semantic_v2": 1.8
+    }
+  ],
+  "knn": [
+    {
+      "field": "BUSINESS_DOMAIN_VECTOR",
+      "query_vector_builder": {
+        "text_embedding": {
+          "model_id": ".multilingual-e5-small",
+          "model_text": "rice"
+        }
+      },
+      "k": 20,
+      "num_candidates": 100,
+      "boost": 4.0
+    },
+    {
+      "field": "KEYWORD_VECTOR",
+      "query_vector_builder": {
+        "text_embedding": {
+          "model_id": ".multilingual-e5-small",
+          "model_text": "rice"
+        }
+      },
+      "k": 20,
+      "num_candidates": 100,
+      "boost": 3.0
+    },
+    {
+      "field": "PRODUCT_VECTOR",
+      "query_vector_builder": {
+        "text_embedding": {
+          "model_id": ".multilingual-e5-small",
+          "model_text": "rice"
+        }
+      },
+      "k": 20,
+      "num_candidates": 100,
+      "boost": 2.0
+    },
+    {
+      "field": "GEOGRAPHY_VECTOR",
+      "query_vector_builder": {
+        "text_embedding": {
+          "model_id": ".multilingual-e5-small",
+          "model_text": "rice"
+        }
+      },
+      "k": 20,
+      "num_candidates": 100,
+      "boost": 2.0
+    },
+    {
+      "field": "IDENTITY_VECTOR",
+      "query_vector_builder": {
+        "text_embedding": {
+          "model_id": ".multilingual-e5-small",
+          "model_text": "rice"
+        }
+      },
+      "k": 20,
+      "num_candidates": 100,
+      "boost": 2.0
+    },
+    {
+      "field": "COMPLIANCE_VECTOR",
+      "query_vector_builder": {
+        "text_embedding": {
+          "model_id": ".multilingual-e5-small",
+          "model_text": "rice"
+        }
+      },
+      "k": 20,
+      "num_candidates": 100,
+      "boost": 3.0
+    }
+  ],
+  "min_score": 0.30000001192092896,
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "bool": {
+            "must": [
+              {
+                "terms": {
+                  "IS_SELL_ITEM": [
+                    "1"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "must": [
+        {
+          "function_score": {
+            "boost_mode": "multiply",
+            "functions": [
+              {
+                "field_value_factor": {
+                  "field": "MEMBER_RANK",
+                  "factor": 0.0015,
+                  "missing": 1.0,
+                  "modifier": "log2p"
+                }
+              },
+              {
+                "filter": {
+                  "term": {
+                    "PREMIUM_MEM_TYPE": {
+                      "value": "G"
+                    }
+                  }
+                },
+                "weight": 3.0
+              },
+              {
+                "filter": {
+                  "term": {
+                    "PREMIUM_MEM_TYPE": {
+                      "value": "S"
+                    }
+                  }
+                },
+                "weight": 2.0
+              },
+              {
+                "filter": {
+                  "term": {
+                    "HAS_IMAGE": {
+                      "value": "1"
+                    }
+                  }
+                },
+                "weight": 1.5
+              },
+              {
+                "filter": {
+                  "term": {
+                    "CATEGORIES.CATG_NAME_ED1": {
+                      "value": "rice"
+                    }
+                  }
+                },
+                "weight": 3.0
+              }
+            ],
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "multi_match": {
+                      "fields": [
+                        "COUNTRY_NAME",
+                        "CONTINENT_NAME",
+                        "CATEGORIES.CATG_NAME_ED*",
+                        "CATEGORIES.CATG_NAME_SD*",
+                        "DEALSIN_EXP",
+                        "DEALSIN_SVC",
+                        "COMPNAME",
+                        "STATE",
+                        "CITY",
+                        "KEYWORD*",
+                        "SHORT_DESC",
+                        "DESCRIPTION",
+                        "KEY_SPEC*",
+                        "NAME^5"
+                      ],
+                      "minimum_should_match": "40%",
+                      "query": "rice"
+                    }
+                  }
+                ],
+                "should": [
+                  {
+                    "multi_match": {
+                      "boost": 2.0,
+                      "fields": [
+                        "COUNTRY_NAME",
+                        "CONTINENT_NAME",
+                        "CATEGORIES.CATG_NAME_ED*",
+                        "CATEGORIES.CATG_NAME_SD*",
+                        "DEALSIN_EXP",
+                        "DEALSIN_SVC",
+                        "COMPNAME",
+                        "STATE",
+                        "CITY",
+                        "KEYWORD*",
+                        "SHORT_DESC",
+                        "DESCRIPTION",
+                        "KEY_SPEC*",
+                        "NAME^5"
+                      ],
+                      "query": "rice",
+                      "slop": 4,
+                      "type": "phrase"
+                    }
+                  }
+                ]
+              }
+            },
+            "score_mode": "sum"
+          }
+        }
+      ]
+    }
+  },
+  "size": 20,
+  "sort": [
+    {
+      "_score": {
+        "order": "desc"
+      }
+    },
+    {
+      "MODDATE": {
+        "order": "desc"
+      }
+    }
+  ],
+  "track_total_hits": true
+}

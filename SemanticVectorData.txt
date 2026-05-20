@@ -1,0 +1,15 @@
+BUYLEADS_SUBJECT: Wanted : Coffee
+BUYLEADS_FULL_TEXT: Dear Sir/Madam,We are looking to purchase scrap automobile items including old car parts, damaged vehicles, used batteries, metal scrap, and other automotive components. Sellers should provide clear details about the items such as type, condition, quantity, and relevant ownership documents. We prioritize reliable, consistent suppliers and are open to negotiating transportation arrangements. Please provide complete contact information for follow-up on following basis:Quantity Required : 60,000 Metric TonsShipping Terms : CNF Destination Port : Colombo, Sri LankaPayment Terms : DLC RegardsContact : Sha********    {VERIFIED BUYLEAD}
+BUYLEADS_EDIT_TEXT: Dear Sir/Madam, I am looking for coffee
+KEYWORDS1: Edible Oil
+KEYWORDS2: HACPO Palm Oil
+KEYWORDS3: Palm Oil
+KEYWORDS4: Palmolien
+CONTINENT_NAME: North America
+COUNTRY_NAME: United States
+CATG_NAME_ID1: Palm Oil
+CATG_NAME_ID2: Edible Oils
+CATG_NAME_ID3: Food Products
+CATG_NAME_ID4: Processed Food & Beverages Products & By Products
+CATG_NAME_ID5: Agriculture and Food
+CATG_NAME_ID6: Products

@@ -1,0 +1,40 @@
+{
+  "PUT _ingest/pipeline/buyleads-embedding-pipeline": {
+    "processors": [
+      {
+        "inference": {
+          "model_id": ".multilingual-e5-small-elasticsearch",
+          "input_output": [
+            {
+              "input_field": "MAIN_CONTENT_TEXT",
+              "output_field": "MAIN_CONTENT_VECTOR"
+            },
+            {
+              "input_field": "CATEGORY_KEYWORD_TEXT",
+              "output_field": "CATEGORY_KEYWORD_VECTOR"
+            },
+            {
+              "input_field": "GEOGRAPHY_TEXT",
+              "output_field": "GEOGRAPHY_VECTOR"
+            },
+            {
+              "input_field": "COMMERCIAL_TEXT",
+              "output_field": "COMMERCIAL_VECTOR"
+            }
+          ]
+        }
+      },
+      {
+        "remove": {
+          "field": [
+            "MAIN_CONTENT_TEXT",
+            "CATEGORY_KEYWORD_TEXT",
+            "GEOGRAPHY_TEXT",
+            "COMMERCIAL_TEXT"
+          ],
+          "ignore_missing": true
+        }
+      }
+    ]
+  }
+}
